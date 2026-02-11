@@ -1,0 +1,59 @@
+.marquee-section {
+    padding: 80px 0;
+    background: var(--bg-primary);
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee__track {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee__content {
+    display: inline-flex;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee__content span {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    padding-right: 0;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee__badge {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.marquee__badge-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 10px 24px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+}
+
+.marquee__badge-text sup {
+    color: var(--accent);
+    font-size: 0.6em;
+}

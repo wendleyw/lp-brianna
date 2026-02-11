@@ -1,0 +1,106 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 24px 0;
+    transition: all var(--transition-medium);
+}
+
+.navbar--scrolled {
+    padding: 14px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.navbar__logo-video {
+    height: 55px;
+    width: auto;
+}
+
+.navbar__logo-text-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    line-height: 1;
+}
+
+.navbar__logo-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.navbar__logo-reg {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 0.9rem;
+    position: relative;
+    top: 2px;
+    color: var(--text-primary);
+}
+
+.navbar__right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navbar__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.navbar__link:hover {
+    color: var(--text-primary);
+}
+
+.navbar__cta {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .navbar__link {
+        display: none;
+    }
+
+    .navbar__cta {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    /* Resize logo for mobile */
+    .navbar__logo-video {
+        height: 40px;
+        /* Smaller video */
+    }
+
+    .navbar__logo-text {
+        font-size: 1.5rem;
+        /* Smaller text */
+    }
+
+    .navbar__logo-reg {
+        font-size: 0.7rem;
+    }
+}

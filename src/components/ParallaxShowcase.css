@@ -1,0 +1,143 @@
+.parallax-showcase {
+    height: 500vh;
+    /* Much longer scroll track to allow full animation */
+    /* Long scroll track */
+    position: relative;
+    background-color: #030303;
+    /* Deep black */
+}
+
+.parallax-showcase__sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.parallax-showcase__bg-gradient {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(249, 69, 45, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.parallax-showcase__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-showcase__header {
+    padding-left: 20px;
+}
+
+.parallax-showcase__title {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(5rem, 15vw, 12rem);
+    /* Massive Shopify-style text */
+    font-weight: 400;
+    line-height: 0.85;
+    margin-bottom: 32px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.text-gradient {
+    /* Brighter, more visible gradient */
+    background: linear-gradient(90deg, #ffffff 0%, #e0e0e0 50%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+    /* Glow effect for visibility */
+}
+
+.parallax-showcase__subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    color: #888;
+    max-width: 500px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.parallax-showcase__cards {
+    position: relative;
+    height: 100vh;
+    /* Full height to avoid clipping */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-card {
+    position: absolute;
+    width: 320px;
+    padding: 40px;
+    background: rgba(20, 20, 20, 0.4);
+    /* Darker, more subtle */
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    /* Top border only for sleekness */
+    border-radius: 4px;
+    /* Sharper corners for minimalist feel */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.parallax-card__title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.parallax-card__desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    color: #888;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 300;
+}
+
+@media (max-width: 900px) {
+    .parallax-showcase__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .parallax-showcase__header {
+        padding-left: 0;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        left: 0;
+    }
+
+    .parallax-showcase__cards {
+        height: 100%;
+        padding-top: 200px;
+    }
+}

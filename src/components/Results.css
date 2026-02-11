@@ -1,0 +1,77 @@
+.results {
+    background: var(--bg-primary);
+}
+
+.results__header {
+    margin-bottom: 60px;
+}
+
+.results__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.results__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.results__card {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.results__stars {
+    display: flex;
+    gap: 4px;
+}
+
+.results__quote {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.results__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.results__person {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.results__company {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.results__metric {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+    padding: 6px 14px;
+    background: rgba(249, 69, 45, 0.08);
+    border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+    .results__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

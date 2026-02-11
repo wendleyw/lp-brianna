@@ -1,0 +1,115 @@
+.portfolio {
+    padding: 100px 0;
+    background: var(--bg-primary);
+}
+
+.portfolio__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 60px;
+}
+
+.portfolio__title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.portfolio__title em {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.portfolio__item {
+    cursor: pointer;
+}
+
+.portfolio__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-medium);
+}
+
+.portfolio__item:hover .portfolio__image {
+    transform: scale(1.02);
+}
+
+.portfolio__image-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    opacity: 0.3;
+    letter-spacing: 0.05em;
+}
+
+.portfolio__hover {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all var(--transition-medium);
+}
+
+.portfolio__item:hover .portfolio__hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio__info {
+    padding: 20px 4px 0;
+}
+
+.portfolio__name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.portfolio__cat {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.portfolio__desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .portfolio__header {
+        flex-direction: column;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .portfolio__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}

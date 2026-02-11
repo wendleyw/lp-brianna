@@ -1,0 +1,127 @@
+.footer {
+    padding: 80px 0 40px;
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-dark);
+    color: var(--text-on-dark);
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+.footer__brand {
+    max-width: 300px;
+}
+
+.footer__logo {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 16px;
+}
+
+.footer__logo-bd {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text-on-dark);
+}
+
+.footer__logo-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-on-dark);
+}
+
+.footer__logo-reg {
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: var(--accent);
+    position: relative;
+    top: -6px;
+}
+
+.footer__tagline {
+    font-size: 0.85rem;
+    color: var(--text-on-dark-muted);
+    line-height: 1.6;
+}
+
+.footer__links {
+    display: flex;
+    gap: 80px;
+}
+
+.footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__col-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-on-dark);
+    margin-bottom: 8px;
+}
+
+.footer__col a {
+    font-size: 0.85rem;
+    color: var(--text-on-dark-muted);
+    transition: color var(--transition-fast);
+}
+
+.footer__col a:hover {
+    color: var(--text-on-dark);
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.footer__copy {
+    font-size: 0.8rem;
+    color: var(--text-on-dark-muted);
+}
+
+.footer__legal {
+    display: flex;
+    gap: 24px;
+}
+
+.footer__legal a {
+    font-size: 0.8rem;
+    color: var(--text-on-dark-muted);
+    transition: color var(--transition-fast);
+}
+
+.footer__legal a:hover {
+    color: var(--text-on-dark);
+}
+
+@media (max-width: 768px) {
+    .footer__top {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer__links {
+        gap: 40px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}

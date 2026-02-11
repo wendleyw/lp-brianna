@@ -1,0 +1,14 @@
+.scroll-story-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure all page sections sit above the 3D canvas */
+.scroll-story-canvas canvas {
+    display: block;
+}

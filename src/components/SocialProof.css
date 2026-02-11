@@ -1,0 +1,65 @@
+.social-proof {
+    padding: 100px 0 80px;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border);
+}
+
+.social-proof__intro {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 60px;
+    line-height: 1.7;
+}
+
+.social-proof__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.social-proof__item {
+    text-align: center;
+    padding: 0 8px;
+}
+
+.social-proof__number {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 900;
+    color: var(--text-primary);
+    display: block;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.social-proof__label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.social-proof__desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .social-proof__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-proof__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
