@@ -38,12 +38,13 @@ export default function Contact() {
             {/* Three.js animated background removed */}
 
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                <div className="contact__grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
+                <div className="contact__grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'end' }}>
                     <motion.div
                         className="contact__content"
                         variants={staggerContainer}
                         initial="hidden"
                         animate={isInView ? 'visible' : 'hidden'}
+                        style={{ paddingBottom: '120px' }}
                     >
                         <motion.h2 className="contact__title" variants={fadeInUp}>
                             Let's bring your
@@ -77,33 +78,20 @@ export default function Contact() {
                     <div className="contact__image-wrapper" style={{ position: 'relative', width: '100%', maxWidth: '500px', aspectRatio: '3/4' }}>
                         {/* Base Image */}
                         <motion.img
-                            src="/Brianna.avif"
+                            src="/bb2.png"
                             alt="Brianna Dawes"
                             style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
                                 width: '100%',
-                                height: '100%',
-                                borderRadius: '20px',
-                                objectFit: 'cover',
-                                opacity: 1
-                            }}
-                        />
-
-                        {/* Overlay Image (Color Change / Hat Effect) - Controlled by scroll */}
-                        <motion.img
-                            src="/bri2.avif"
-                            alt="Brianna Dawes Alternate"
-                            style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: '100%',
-                                borderRadius: '20px',
-                                objectFit: 'cover',
-                                opacity: buttonBg // Reuse the scroll progress from the button for sync
+                                height: 'auto',
+                                display: 'block', // Prevent inline gap
+                                borderTopLeftRadius: '20px',
+                                borderTopRightRadius: '20px',
+                                borderBottomLeftRadius: '0',
+                                borderBottomRightRadius: '0',
+                                objectFit: 'contain',
+                                filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 15px rgba(249, 69, 45, 0.4))',
+                                opacity: 1,
+                                transform: 'translateY(1px)' // Ensure it touches the edge
                             }}
                         />
                     </div>

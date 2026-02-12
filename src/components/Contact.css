@@ -1,7 +1,10 @@
 .contact {
-    padding: 120px 0;
+    padding: 120px 0 0 0;
+    /* Remove bottom padding */
     text-align: left;
     background-color: #000;
+    overflow: hidden;
+    /* Ensure image doesn't overflow if negative margin used */
 }
 
 .contact__inner {
