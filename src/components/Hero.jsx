@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Play } from 'lucide-react'
 import { staggerContainer, fadeInUp } from '../hooks'
 import VideoModal from './VideoModal'
+import ImageSequence from './ImageSequence'
 import './Hero.css'
 
 const services = ['UX/UI Design', 'Development', 'Brand Identity Design', 'Ongoing Support']
@@ -81,6 +82,10 @@ export default function Hero() {
             </div>
 
             {/* Hero image area */}
+            {/* Hero image area */}
+            <ImageSequence images={['/img-se/1.jpg', '/img-se/2.jpg', '/img-se/3.jpg', '/img-se/4.jpg', '/img-se/5.jpg']} />
+
+            {/* 
             <motion.div
                 className="hero__image"
                 initial={{ opacity: 0, y: 40 }}
@@ -99,7 +104,8 @@ export default function Hero() {
                         }}
                     />
                 </div>
-            </motion.div>
+            </motion.div> 
+            */}
             <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
         </section>
     )

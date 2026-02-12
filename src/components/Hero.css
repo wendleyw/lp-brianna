@@ -1,7 +1,8 @@
 .hero {
     padding-top: 120px;
     background: var(--bg-primary);
-    overflow: hidden;
+    padding-top: 120px;
+    background: var(--bg-primary);
 }
 
 .hero__top {

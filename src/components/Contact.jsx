@@ -96,13 +96,13 @@ export default function Contact() {
                             }}
                             style={{
                                 position: 'absolute',
-                                top: '-15%', // Adjusted to sit above head
-                                left: '50%', // Center horizontally
-                                transform: 'translateX(-50%)', // Center align
+                                top: '-8%', // Lowered to be closer to head
+                                left: '42%', // Shifted left to match leaning posture
+                                transform: 'translateX(-50%)',
                                 background: 'white',
                                 padding: '15px 25px',
                                 borderRadius: '50px',
-                                boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                                boxShadow: '0 0 0 4px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.8), 0 10px 30px rgba(0,0,0,0.2)', // Outline glow effect
                                 zIndex: 10,
                                 display: 'flex',
                                 alignItems: 'center',
@@ -118,7 +118,7 @@ export default function Contact() {
                             <div style={{
                                 position: 'absolute',
                                 bottom: '-8px',
-                                left: '12px', // Align with the border-bottom-left-radius 0
+                                left: '15px', // Align with the border-bottom-left-radius 0
                                 width: '20px',
                                 height: '20px',
                                 background: 'white',
