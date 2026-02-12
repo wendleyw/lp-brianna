@@ -63,7 +63,7 @@ export default function Preloader() {
                     >
                         <motion.div
                             style={{
-                                marginRight: '12px',
+                                marginRight: '6px',
                                 color: 'white',
                                 fontFamily: '"Bebas Neue", sans-serif',
                                 fontWeight: 400,
@@ -99,7 +99,7 @@ export default function Preloader() {
                     >
                         <motion.div
                             style={{
-                                marginLeft: '12px',
+                                marginLeft: '6px',
                                 color: 'white',
                                 fontFamily: '"Bebas Neue", sans-serif',
                                 fontWeight: 400,
