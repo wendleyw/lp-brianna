@@ -38,6 +38,11 @@ export default function ParallaxShowcase() {
         offset: ["start end", "end start"]
     })
 
+    // DESKTOP ANIMATIONS (Hooks must be called unconditionally)
+    const headerOpacity = useTransform(scrollYProgress, [0.15, 0.20, 0.30, 0.40], [0, 1, 1, 0])
+    const headerX = useTransform(scrollYProgress, [0.15, 0.20, 0.35, 0.45], [50, 0, 0, -100])
+    const headerBlur = useTransform(scrollYProgress, [0.30, 0.40], ["blur(0px)", "blur(10px)"])
+
     return (
         <section className="parallax-showcase" ref={containerRef}>
             <div className="parallax-showcase__sticky">
@@ -47,10 +52,9 @@ export default function ParallaxShowcase() {
                     <motion.div
                         className="parallax-showcase__header"
                         style={isMobile ? {} : {
-                            // Desktop animations
-                            opacity: useTransform(scrollYProgress, [0.15, 0.20, 0.30, 0.40], [0, 1, 1, 0]),
-                            x: useTransform(scrollYProgress, [0.15, 0.20, 0.35, 0.45], [50, 0, 0, -100]),
-                            filter: useTransform(scrollYProgress, [0.30, 0.40], ["blur(0px)", "blur(10px)"])
+                            opacity: headerOpacity,
+                            x: headerX,
+                            filter: headerBlur
                         }}
                     >
                         <h2 className="parallax-showcase__title">
@@ -66,16 +70,21 @@ export default function ParallaxShowcase() {
                     <div className="parallax-showcase__cards">
                         {cards.map((card, index) => {
                             // Desktop Animations Only
+                            // Hooks inside map is generally safe if array is constant, which it is here.
                             const delay = index * 0.05
                             const start = 0.25 + delay
                             const end = 0.45 + delay
                             const startY = 400 + (index * 80)
                             const targetY = (index - 1) * 220
 
+                            const cardY = useTransform(scrollYProgress, [start, end], [startY, targetY])
+                            const cardOpacity = useTransform(scrollYProgress, [start, start + 0.08, 0.75, 0.85], [0, 1, 1, 0])
+                            const cardScale = useTransform(scrollYProgress, [start, end], [0.85, 1])
+
                             const desktopStyle = {
-                                y: useTransform(scrollYProgress, [start, end], [startY, targetY]),
-                                opacity: useTransform(scrollYProgress, [start, start + 0.08, 0.75, 0.85], [0, 1, 1, 0]),
-                                scale: useTransform(scrollYProgress, [start, end], [0.85, 1]),
+                                y: cardY,
+                                opacity: cardOpacity,
+                                scale: cardScale,
                                 zIndex: cards.length - index,
                                 position: 'absolute',
                                 width: '320px'
