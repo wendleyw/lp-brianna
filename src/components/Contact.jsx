@@ -79,12 +79,26 @@ export default function Contact() {
                         {/* Growth Bubble */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                            transition={{ delay: 0.5, duration: 0.6, type: "spring" }}
+                            whileInView={{
+                                opacity: 1,
+                                scale: 1,
+                                y: [0, -15, 0] // Floating "thinking" animation
+                            }}
+                            transition={{
+                                opacity: { duration: 0.5, delay: 0.5 },
+                                scale: { duration: 0.5, delay: 0.5 },
+                                y: {
+                                    duration: 3,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                    delay: 0.5
+                                }
+                            }}
                             style={{
                                 position: 'absolute',
-                                top: '-20%',
-                                right: '-10%',
+                                top: '-15%', // Adjusted to sit above head
+                                left: '50%', // Center horizontally
+                                transform: 'translateX(-50%)', // Center align
                                 background: 'white',
                                 padding: '15px 25px',
                                 borderRadius: '50px',
@@ -93,7 +107,7 @@ export default function Contact() {
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '12px',
-                                borderBottomLeftRadius: '0' // Speech bubble tail effect
+                                borderBottomLeftRadius: '0'
                             }}
                         >
                             <TrendingUp size={24} color="#F9452D" />
@@ -104,7 +118,7 @@ export default function Contact() {
                             <div style={{
                                 position: 'absolute',
                                 bottom: '-8px',
-                                left: '0',
+                                left: '12px', // Align with the border-bottom-left-radius 0
                                 width: '20px',
                                 height: '20px',
                                 background: 'white',
