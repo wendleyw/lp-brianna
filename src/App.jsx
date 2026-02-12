@@ -11,10 +11,17 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Scroll3DScene from './components/Scroll3DScene'
 import ParallaxShowcase from './components/ParallaxShowcase'
+import AnalyticsDashboard from './components/AnalyticsDashboard'
+import Preloader from './components/Preloader'
 
 function App() {
+  if (window.location.pathname.startsWith('/dashboard')) {
+    return <AnalyticsDashboard />
+  }
+
   return (
     <>
+      <Preloader />
       <Scroll3DScene />
       <Navbar />
       <main>

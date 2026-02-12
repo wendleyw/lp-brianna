@@ -93,8 +93,8 @@ function IntertwiningDrops() {
             : { x: -4.5, y: 0 }
 
         const rightPos = isMobile
-            ? { x: 0, y: -0.5 }    // Center/right
-            : { x: 0, y: -1.0 }
+            ? { x: 1.5, y: -0.5 }    // Right side
+            : { x: 4.5, y: -1.0 }
 
         if (progress < 0.6) {
             // Phase 1: Start → Left
@@ -158,8 +158,9 @@ function IntertwiningDrops() {
             const parallaxSection = document.querySelector('.parallax-showcase')
             if (parallaxSection) {
                 const rect = parallaxSection.getBoundingClientRect()
-                const pastParallax = rect.bottom < window.innerHeight * 0.5
-                const targetColor = pastParallax ? orangeColor : blackColor
+                // Change to orange when entering the section (top reaches 60% of viewport)
+                const enteredParallax = rect.top < window.innerHeight * 0.6
+                const targetColor = enteredParallax ? orangeColor : blackColor
                 drop2MaterialRef.current.color.lerp(targetColor, 0.08)
             }
         }
