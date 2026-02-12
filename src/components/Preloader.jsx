@@ -70,7 +70,8 @@ export default function Preloader() {
                                 fontSize: 'clamp(2rem, 5vw, 5rem)',
                                 letterSpacing: '0.1em',
                                 whiteSpace: 'nowrap',
-                                overflow: 'hidden'
+                                overflow: 'hidden',
+                                transform: 'translateX(-40px)' // Visually balance the center split
                             }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -105,7 +106,8 @@ export default function Preloader() {
                                 fontSize: 'clamp(2rem, 5vw, 5rem)',
                                 letterSpacing: '0.1em',
                                 whiteSpace: 'nowrap',
-                                overflow: 'hidden'
+                                overflow: 'hidden',
+                                transform: 'translateX(-40px)' // Visually balance the center split
                             }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}

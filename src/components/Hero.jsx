@@ -87,8 +87,17 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
             >
-                <div className="hero__image-placeholder">
-                    <span>Design Studio</span>
+                <div className="hero__image-placeholder" style={{ background: 'none', border: 'none' }}>
+                    <img
+                        src="/b1.png"
+                        alt="Design Studio"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            borderRadius: 'var(--radius-lg)'
+                        }}
+                    />
                 </div>
             </motion.div>
             <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} />
