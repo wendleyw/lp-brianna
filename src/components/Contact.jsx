@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, TrendingUp, Rocket, Zap } from 'lucide-react'
 import { useInView, fadeInUp, staggerContainer } from '../hooks'
 
 import ContactModal from './ContactModal'
@@ -76,6 +76,42 @@ export default function Contact() {
                     </motion.div>
 
                     <div className="contact__image-wrapper" style={{ position: 'relative', width: '100%', maxWidth: '500px', aspectRatio: '3/4' }}>
+                        {/* Growth Bubble */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                            transition={{ delay: 0.5, duration: 0.6, type: "spring" }}
+                            style={{
+                                position: 'absolute',
+                                top: '-20%',
+                                right: '-10%',
+                                background: 'white',
+                                padding: '15px 25px',
+                                borderRadius: '50px',
+                                boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+                                zIndex: 10,
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '12px',
+                                borderBottomLeftRadius: '0' // Speech bubble tail effect
+                            }}
+                        >
+                            <TrendingUp size={24} color="#F9452D" />
+                            <Rocket size={24} color="#0a0a0a" />
+                            <Zap size={24} color="#F5A623" />
+
+                            {/* Tail */}
+                            <div style={{
+                                position: 'absolute',
+                                bottom: '-8px',
+                                left: '0',
+                                width: '20px',
+                                height: '20px',
+                                background: 'white',
+                                clipPath: 'polygon(0 0, 100% 0, 0 100%)'
+                            }} />
+                        </motion.div>
+
                         {/* Base Image */}
                         <motion.img
                             src="/bb2.png"
