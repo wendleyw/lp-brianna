@@ -84,23 +84,23 @@
         display: none;
     }
 
-    .navbar__cta {
-        padding: 10px 20px;
-        font-size: 0.8rem;
-    }
-
     /* Resize logo for mobile */
     .navbar__logo-video {
-        height: 40px;
+        height: 32px;
         /* Smaller video */
     }
 
     .navbar__logo-text {
-        font-size: 1.5rem;
-        /* Smaller text */
+        font-size: 1.25rem;
+        /* Significantly smaller text to fit */
     }
 
     .navbar__logo-reg {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+    }
+
+    .navbar__cta {
+        padding: 8px 16px;
+        font-size: 0.75rem;
     }
 }
