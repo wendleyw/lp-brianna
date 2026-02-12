@@ -49,7 +49,7 @@ export default function Preloader() {
                     {/* Left Panel */}
                     <motion.div
                         style={{
-                            width: '50%',
+                            width: '42%', // Short text "BRIANNA" takes less space
                             height: '100%',
                             backgroundColor: '#121212',
                             display: 'flex',
@@ -70,8 +70,7 @@ export default function Preloader() {
                                 fontSize: 'clamp(2rem, 5vw, 5rem)',
                                 letterSpacing: '0.1em',
                                 whiteSpace: 'nowrap',
-                                overflow: 'hidden',
-                                transform: 'translateX(-40px)' // Visually balance the center split
+                                overflow: 'hidden'
                             }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -85,7 +84,7 @@ export default function Preloader() {
                     {/* Right Panel */}
                     <motion.div
                         style={{
-                            width: '50%',
+                            width: '58%', // Long text "DAWES STUDIOS" takes more space
                             height: '100%',
                             backgroundColor: '#121212',
                             display: 'flex',
@@ -106,8 +105,7 @@ export default function Preloader() {
                                 fontSize: 'clamp(2rem, 5vw, 5rem)',
                                 letterSpacing: '0.1em',
                                 whiteSpace: 'nowrap',
-                                overflow: 'hidden',
-                                transform: 'translateX(-40px)' // Visually balance the center split
+                                overflow: 'hidden'
                             }}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
